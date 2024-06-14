@@ -1,7 +1,11 @@
 .footer {
   &__wrapper {
-    padding-block: 45px;
+    padding: 45px 0 85px;
     background-color: $black;
+
+    @include on-laptop {
+      padding-block: 45px;
+    }
   }
   &__inner {
     display: grid;
