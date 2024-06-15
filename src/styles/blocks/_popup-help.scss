@@ -63,8 +63,10 @@
   }
   &__inline-link {
     color: $main;
+    transition: color 0.3s ease-in-out;
+
     &:hover {
-      text-decoration: underline;
+      color: $grey;
     }
   }
   &__inner {
@@ -81,13 +83,15 @@
   }
   &__url {
     color: $main;
+    transition: color 0.3s ease-in-out;
     &:hover {
-      text-decoration: underline;
+      color: $grey;
     }
     &--grey {
       color: $grey;
+      transition: color 0.3s ease-in-out;
       &:hover {
-        text-decoration: underline;
+        color: $main;
       }
     }
   }
@@ -137,7 +141,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 70px 20px 30px;
+    padding: 70px 20px 70px;
 
     @include on-laptop {
       min-height: 100%;

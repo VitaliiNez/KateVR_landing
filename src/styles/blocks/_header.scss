@@ -9,11 +9,11 @@
     width: 100%;
     position: relative;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       right: 25px;
       top: 50%;
-      background-image: url('./../images/vector/arrow-left.svg');
+      background-image: url("./../images/vector/arrow-left.svg");
       height: 17px;
       width: 9px;
       background-repeat: no-repeat;
@@ -42,11 +42,11 @@
     width: 100%;
     position: relative;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       right: 25px;
       top: 50%;
-      background-image: url('./../images/vector/arrow-left.svg');
+      background-image: url("./../images/vector/arrow-left.svg");
       height: 17px;
       width: 9px;
       background-repeat: no-repeat;
@@ -56,6 +56,7 @@
   }
   &__box {
     display: flex;
+    align-items: center;
     gap: 34px;
   }
   &__wrapper.header__wrapper--scrolled {
@@ -63,33 +64,41 @@
   }
   &__option {
     color: $white;
-    background-color: $grey;
+    background-color: $secondary;
     padding: 5px;
     cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 10px 100px $secondary inset;
+    }
   }
   &__select {
     color: $main;
     cursor: pointer;
     display: inline-block;
-    width: 35px;
+    // width: 35px;
+    border: 1px solid transparent;
+    padding: 4px 16px 4px 8px;
+    transition: border 0.3s ease-in-out;
+    &:hover {
+      border: 1px solid $main;
+    }
   }
   &__language {
     position: relative;
     display: none;
-
     @include on-laptop {
       display: block;
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
-      right: 0;
-      top: 50%;
+      right: 4px;
+      top: 13px;
       display: block;
       width: 9px;
       height: 6px;
-      background-image: url('./../images/vector/arrow-down.svg');
+      background-image: url("./../images/vector/arrow-down.svg");
       background-repeat: no-repeat;
     }
   }
@@ -235,7 +244,7 @@
     z-index: 1;
     transition: transform 0.3s ease-in-out;
     &::after {
-      content: '';
+      content: "";
 
       @extend %burger-styles;
 
@@ -243,7 +252,7 @@
       transition: transform 0.3s ease-in-out;
     }
     &::before {
-      content: '';
+      content: "";
 
       @extend %burger-styles;
 

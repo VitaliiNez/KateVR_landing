@@ -61,15 +61,14 @@
   &__social-item {
     img {
       display: block;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: rotateY(180deg);
+      }
     }
   }
   &__social__link {
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-
-    &:hover {
-      opacity: 0.8;
-    }
+    transition: all 0.3s ease-in-out;
   }
   &__social-links {
     grid-row: 3 / 4;
