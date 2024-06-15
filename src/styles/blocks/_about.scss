@@ -182,6 +182,10 @@
     grid-column: span 1;
 
     @include on-tablet {
+      grid-column: 4/ -1;
+    }
+
+    @include on-laptop {
       grid-column: 5/ -1;
     }
   }
